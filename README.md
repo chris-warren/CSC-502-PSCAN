@@ -4,7 +4,7 @@ This repository contains an implementation of PSCAN as authored by Zhao et al. I
 ## Setup
 Instructions for venv setup:
 
-- create venv: `python3 -m venv myenv`
+- create venv: `python3 -m venv venv`
 - activate venv: `source venv/bin/activate`
 - install requirements: `pip install -r requirements.txt`
 Note: The venv folder will be ignored by git
