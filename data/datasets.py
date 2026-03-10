@@ -60,7 +60,7 @@ class DatasetStats:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate PSCAN datasets.")
-    parser.add_argument("--output-dir", type=Path, default=Path("."))
+    parser.add_argument("--output-dir", type=Path, default=Path("./data"))
     parser.add_argument("--seed", type=int, default=42)
 
     parser.add_argument(
