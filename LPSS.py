@@ -1,12 +1,13 @@
-from similarity_score.similarity import load_adjacency_list
 
 import sys
 import ast
 from typing import Dict, Iterable, List, Set, Tuple
+from collections import defaultdict
+from similarity_score.similarity import load_adjacency_list
 
 
 
-def create_filtered_adjlist(EPSILON = 0.5 : int) -> Dict[int, List[int]]:
+def create_filtered_adjlist(EPSILON: float = 0.5) -> Dict[int, List[int]]:
    """
     Parses output from std::istream stream LPCC_Reducer, whose output is in the format of (edge, similarity_score).
 
@@ -16,7 +17,7 @@ def create_filtered_adjlist(EPSILON = 0.5 : int) -> Dict[int, List[int]]:
 
     Parameters
     ----------
-    EPSILON : int
+    EPSILON : float
         epsilon constant for similarity_score.
 
     Returns
@@ -26,6 +27,8 @@ def create_filtered_adjlist(EPSILON = 0.5 : int) -> Dict[int, List[int]]:
 
     Raises
     ------
+    ValueError
+        If input value is not in the format of (edges,similarity_score), then raises a valueerror.
     
     """
 
@@ -34,6 +37,9 @@ def create_filtered_adjlist(EPSILON = 0.5 : int) -> Dict[int, List[int]]:
     for line in sys.stdin:
 
         edge, similarity_score = ast.literal_eval(line.strip())
+
+        if not (isinstance(edges, Tuple) and isinstance(similarity_score,(int,float))):
+            raise ValueError(f"Invalid input line: {line}")
 
         if similarity_score >= EPSILON:
 
@@ -67,13 +73,10 @@ def LPCC_emitter(filtered_adjlist : Dict[int, List[int]]) -> None:
     """
 
     
-    for key in filtered_adjlist:
+    for key, current_adjlist in filtered_adjlist.items():
         
         status = True
         label = key
-        current_adjlist = filtered_adjlist[key]
-
-
         print(f"({key},({status},{label},{current_adjlist}))")
 
 
