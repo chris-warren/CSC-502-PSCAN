@@ -309,7 +309,7 @@ def main() -> None:
 
     adjacency = load_adjacency_list(args.input)
     results = compute_all_similarities(adjacency)
-    write_results(results, args.output)
+    write_results(results, Path("input.txt"))
 
 
 if __name__ == "__main__":

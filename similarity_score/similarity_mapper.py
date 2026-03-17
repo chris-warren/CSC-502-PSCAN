@@ -33,34 +33,50 @@ Notes
 """
 
 from __future__ import annotations
-
+from pathlib import Path
 import sys
+import ast
 
 
 def main() -> None:
-    for raw_line in sys.stdin:
-        line = raw_line.strip()
-        if not line:
-            continue
 
-        parts = line.split()
+    input_path = Path("input.txt")
 
-        try:
-            values = [int(token) for token in parts]
-        except ValueError:
-            continue
+    with input_path.open("r", encoding="utf-8") as f:
+        for raw_line in f:
+            line = raw_line.strip()
+            if not line:
+                continue
 
-        u = values[0]
-        neighbors = values[1:]
+            if line.startswith("u\tv") or line.lower().startswith("u"):
+                continue
 
-        # Remove self-loops if present and deduplicate neighbors.
-        neighbor_set = sorted(set(v for v in neighbors if v != u))
+            edge_str, edge_str2, adj_str = line.split('\t')
+            edge = ast.literal_eval(edge_str)
+            edge_2 = ast.literaL-eval(edge_str2)
+            adj = ast.literal_eval(adj_str)
 
-        for v in neighbor_set:
-            edge = (u, v) if u < v else (v, u)
+            print(edge, edge_str, adj,sep=" ")
 
-            # Emit this node's neighborhood information for the edge.
-            print(f"{edge}\t{('ADJ', u, neighbor_set)}")
+            
+            try:
+                values = [int(parts[0]),int(parts[1]),float(parts[2])]
+            except ValueError:
+                continue
+
+            u = values[0]
+            neighbors = values[1:]
+
+            # Remove self-loops if present and deduplicate neighbors.
+            neighbor_set = sorted(set(v for v in neighbors if v != u))
+
+            for v in neighbor_set:
+                edge = (u, v) if u < v else (v, u)
+
+                # Emit this node's neighborhood information for the edge.
+                print(f"{edge}\t{('ADJ', u, neighbor_set)}")
+
+    
 
 
 if __name__ == "__main__":
