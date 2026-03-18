@@ -1,0 +1,172 @@
+{
+  "datasets": [
+    {
+      "average_degree_realized": 16.9512,
+      "connected_components": 1,
+      "density": 0.0033909181836367275,
+      "family": "LFR",
+      "files": {
+        "adjlist": "adjlists/lfr_5000.adjlist",
+        "labels": "labels/lfr_5000.labels.tsv",
+        "metadata": "metadata/lfr_5000.meta.json"
+      },
+      "isolated_vertices": 0,
+      "largest_component_size": 5000,
+      "name": "lfr_5000",
+      "num_clusters": 109,
+      "num_edges": 42378,
+      "num_nodes": 5000,
+      "parameters": {
+        "average_degree": 15,
+        "generator": "networkx.generators.community.LFR_benchmark_graph",
+        "max_community": 100,
+        "max_degree": 75,
+        "min_community": 20,
+        "mu": 0.1,
+        "seed": 5042,
+        "tau1": 3.0,
+        "tau2": 1.5
+      }
+    },
+    {
+      "average_degree_realized": 16.8224,
+      "connected_components": 1,
+      "density": 0.0016824082408240825,
+      "family": "LFR",
+      "files": {
+        "adjlist": "adjlists/lfr_10000.adjlist",
+        "labels": "labels/lfr_10000.labels.tsv",
+        "metadata": "metadata/lfr_10000.meta.json"
+      },
+      "isolated_vertices": 0,
+      "largest_component_size": 10000,
+      "name": "lfr_10000",
+      "num_clusters": 223,
+      "num_edges": 84112,
+      "num_nodes": 10000,
+      "parameters": {
+        "average_degree": 15,
+        "generator": "networkx.generators.community.LFR_benchmark_graph",
+        "max_community": 100,
+        "max_degree": 75,
+        "min_community": 20,
+        "mu": 0.1,
+        "seed": 10042,
+        "tau1": 3.0,
+        "tau2": 1.5
+      }
+    },
+    {
+      "average_degree_realized": 16.7394,
+      "connected_components": 1,
+      "density": 0.0008370118505925296,
+      "family": "LFR",
+      "files": {
+        "adjlist": "adjlists/lfr_20000.adjlist",
+        "labels": "labels/lfr_20000.labels.tsv",
+        "metadata": "metadata/lfr_20000.meta.json"
+      },
+      "isolated_vertices": 0,
+      "largest_component_size": 20000,
+      "name": "lfr_20000",
+      "num_clusters": 446,
+      "num_edges": 167394,
+      "num_nodes": 20000,
+      "parameters": {
+        "average_degree": 15,
+        "generator": "networkx.generators.community.LFR_benchmark_graph",
+        "max_community": 100,
+        "max_degree": 75,
+        "min_community": 20,
+        "mu": 0.1,
+        "seed": 20042,
+        "tau1": 3.0,
+        "tau2": 1.5
+      }
+    },
+    {
+      "average_degree_realized": 16.78135,
+      "connected_components": 1,
+      "density": 0.00041954423860596517,
+      "family": "LFR",
+      "files": {
+        "adjlist": "adjlists/lfr_40000.adjlist",
+        "labels": "labels/lfr_40000.labels.tsv",
+        "metadata": "metadata/lfr_40000.meta.json"
+      },
+      "isolated_vertices": 0,
+      "largest_component_size": 40000,
+      "name": "lfr_40000",
+      "num_clusters": 902,
+      "num_edges": 335627,
+      "num_nodes": 40000,
+      "parameters": {
+        "average_degree": 15,
+        "generator": "networkx.generators.community.LFR_benchmark_graph",
+        "max_community": 100,
+        "max_degree": 75,
+        "min_community": 20,
+        "mu": 0.1,
+        "seed": 40042,
+        "tau1": 3.0,
+        "tau2": 1.5
+      }
+    },
+    {
+      "average_degree_realized": 16.736575,
+      "connected_components": 1,
+      "density": 0.00020920980262253278,
+      "family": "LFR",
+      "files": {
+        "adjlist": "adjlists/lfr_80000.adjlist",
+        "labels": "labels/lfr_80000.labels.tsv",
+        "metadata": "metadata/lfr_80000.meta.json"
+      },
+      "isolated_vertices": 0,
+      "largest_component_size": 80000,
+      "name": "lfr_80000",
+      "num_clusters": 1768,
+      "num_edges": 669463,
+      "num_nodes": 80000,
+      "parameters": {
+        "average_degree": 15,
+        "generator": "networkx.generators.community.LFR_benchmark_graph",
+        "max_community": 100,
+        "max_degree": 75,
+        "min_community": 20,
+        "mu": 0.1,
+        "seed": 80042,
+        "tau1": 3.0,
+        "tau2": 1.5
+      }
+    },
+    {
+      "average_degree_realized": 16.8072625,
+      "connected_components": 1,
+      "density": 0.00010504604716279477,
+      "family": "LFR",
+      "files": {
+        "adjlist": "adjlists/lfr_160000.adjlist",
+        "labels": "labels/lfr_160000.labels.tsv",
+        "metadata": "metadata/lfr_160000.meta.json"
+      },
+      "isolated_vertices": 0,
+      "largest_component_size": 160000,
+      "name": "lfr_160000",
+      "num_clusters": 3598,
+      "num_edges": 1344581,
+      "num_nodes": 160000,
+      "parameters": {
+        "average_degree": 15,
+        "generator": "networkx.generators.community.LFR_benchmark_graph",
+        "max_community": 100,
+        "max_degree": 75,
+        "min_community": 20,
+        "mu": 0.1,
+        "seed": 160042,
+        "tau1": 3.0,
+        "tau2": 1.5
+      }
+    }
+  ]
+}

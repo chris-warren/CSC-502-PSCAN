@@ -1,0 +1,28 @@
+{
+  "average_degree_realized": 16.736575,
+  "connected_components": 1,
+  "density": 0.00020920980262253278,
+  "family": "LFR",
+  "files": {
+    "adjlist": "adjlists/lfr_80000.adjlist",
+    "labels": "labels/lfr_80000.labels.tsv",
+    "metadata": "metadata/lfr_80000.meta.json"
+  },
+  "isolated_vertices": 0,
+  "largest_component_size": 80000,
+  "name": "lfr_80000",
+  "num_clusters": 1768,
+  "num_edges": 669463,
+  "num_nodes": 80000,
+  "parameters": {
+    "average_degree": 15,
+    "generator": "networkx.generators.community.LFR_benchmark_graph",
+    "max_community": 100,
+    "max_degree": 75,
+    "min_community": 20,
+    "mu": 0.1,
+    "seed": 80042,
+    "tau1": 3.0,
+    "tau2": 1.5
+  }
+}
