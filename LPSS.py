@@ -38,7 +38,7 @@ def create_filtered_adjlist(EPSILON: float = 0.5) -> Dict[int, List[int]]:
 
         edge, similarity_score = ast.literal_eval(line.strip())
 
-        if not (isinstance(edges, Tuple) and isinstance(similarity_score,(int,float))):
+        if not (isinstance(edge, Tuple) and isinstance(similarity_score,(int,float))):
             raise ValueError(f"Invalid input line: {line}")
 
         if similarity_score >= EPSILON:
