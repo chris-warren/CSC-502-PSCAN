@@ -3,4 +3,6 @@ venv/
 data/adjlists/
 data/labels/
 data/metadata/
+data/output/
 data/manifest.json
+similarity/cluster_code_alliancecan/data/
