@@ -1,0 +1,893 @@
+==========================================
+Job started:  Sat 28 Mar 2026 02:54:16 AM EDT
+Node:         tri0144
+Job ID:       1246535
+==========================================
+Starting Runtime Experiment on LFR graphs...
+
+[runtime_lfr] LFR sizes : [500, 1000, 2000, 5000, 10000, 20000, 40000, 80000, 160000]
+[runtime_lfr] Machines  : [4, 8, 15]
+[runtime_lfr] Epsilon   : 0.4
+
+--- lfr_500  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_500.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_500.sim_clusters.csv
+[clustering] Total clusters: 16
+  -> 0.07s
+
+--- lfr_500  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_500.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_500.sim_clusters.csv
+[clustering] Total clusters: 16
+  -> 0.04s
+
+--- lfr_500  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_500.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_500.sim_clusters.csv
+[clustering] Total clusters: 16
+  -> 0.04s
+
+--- lfr_1000  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_1000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_1000.sim_clusters.csv
+[clustering] Total clusters: 44
+  -> 0.07s
+
+--- lfr_1000  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_1000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_1000.sim_clusters.csv
+[clustering] Total clusters: 44
+  -> 0.06s
+
+--- lfr_1000  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_1000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_1000.sim_clusters.csv
+[clustering] Total clusters: 44
+  -> 0.06s
+
+--- lfr_2000  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_2000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_2000.sim_clusters.csv
+[clustering] Total clusters: 77
+  -> 0.12s
+
+--- lfr_2000  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_2000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_2000.sim_clusters.csv
+[clustering] Total clusters: 77
+  -> 0.11s
+
+--- lfr_2000  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_2000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_2000.sim_clusters.csv
+[clustering] Total clusters: 77
+  -> 0.12s
+
+--- lfr_5000  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_5000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_5000.sim_clusters.csv
+[clustering] Total clusters: 195
+  -> 0.30s
+
+--- lfr_5000  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_5000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_5000.sim_clusters.csv
+[clustering] Total clusters: 195
+  -> 0.29s
+
+--- lfr_5000  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_5000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_5000.sim_clusters.csv
+[clustering] Total clusters: 195
+  -> 0.30s
+
+--- lfr_10000  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_10000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_10000.sim_clusters.csv
+[clustering] Total clusters: 347
+  -> 0.67s
+
+--- lfr_10000  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_10000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_10000.sim_clusters.csv
+[clustering] Total clusters: 347
+  -> 0.66s
+
+--- lfr_10000  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_10000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_10000.sim_clusters.csv
+[clustering] Total clusters: 347
+  -> 0.67s
+
+--- lfr_20000  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_20000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_20000.sim_clusters.csv
+[clustering] Total clusters: 835
+  -> 1.56s
+
+--- lfr_20000  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_20000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_20000.sim_clusters.csv
+[clustering] Total clusters: 835
+  -> 1.48s
+
+--- lfr_20000  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_20000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_20000.sim_clusters.csv
+[clustering] Total clusters: 835
+  -> 1.53s
+
+--- lfr_40000  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_40000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: True
+--- Iteration 13 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_40000.sim_clusters.csv
+[clustering] Total clusters: 1520
+  -> 3.55s
+
+--- lfr_40000  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_40000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: True
+--- Iteration 13 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_40000.sim_clusters.csv
+[clustering] Total clusters: 1520
+  -> 3.62s
+
+--- lfr_40000  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_40000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: True
+--- Iteration 13 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_40000.sim_clusters.csv
+[clustering] Total clusters: 1520
+  -> 3.55s
+
+--- lfr_80000  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_80000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: True
+--- Iteration 13 ---
+active change: True
+--- Iteration 14 ---
+active change: True
+--- Iteration 15 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_80000.sim_clusters.csv
+[clustering] Total clusters: 3272
+  -> 8.52s
+
+--- lfr_80000  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_80000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: True
+--- Iteration 13 ---
+active change: True
+--- Iteration 14 ---
+active change: True
+--- Iteration 15 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_80000.sim_clusters.csv
+[clustering] Total clusters: 3272
+  -> 8.59s
+
+--- lfr_80000  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_80000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: True
+--- Iteration 13 ---
+active change: True
+--- Iteration 14 ---
+active change: True
+--- Iteration 15 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_80000.sim_clusters.csv
+[clustering] Total clusters: 3272
+  -> 8.34s
+
+--- lfr_160000  machines=4 (workers=4) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_160000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_160000.sim_clusters.csv
+[clustering] Total clusters: 6262
+  -> 19.28s
+
+--- lfr_160000  machines=8 (workers=8) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_160000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_160000.sim_clusters.csv
+[clustering] Total clusters: 6262
+  -> 19.29s
+
+--- lfr_160000  machines=15 (workers=15) ---
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_160000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv ...
+--- Iteration 0 ---
+active change: True
+--- Iteration 1 ---
+active change: True
+--- Iteration 2 ---
+active change: True
+--- Iteration 3 ---
+active change: True
+--- Iteration 4 ---
+active change: True
+--- Iteration 5 ---
+active change: True
+--- Iteration 6 ---
+active change: True
+--- Iteration 7 ---
+active change: True
+--- Iteration 8 ---
+active change: True
+--- Iteration 9 ---
+active change: True
+--- Iteration 10 ---
+active change: True
+--- Iteration 11 ---
+active change: True
+--- Iteration 12 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_160000.sim_clusters.csv
+[clustering] Total clusters: 6262
+  -> 19.20s
+
+[runtime_lfr] Results -> /scratch/nidita/pscan_output/results_runtime_lfr.csv
+Exit code: 0
+LFR runtime experiment finished: Sat 28 Mar 2026 02:55:59 AM EDT
+No results_runtime_lfr.csv to copy
+==========================================
+
+scontrol show job 1246535
+JobId=1246535 JobName=pscan_runtime_lfr
+   UserId=nidita(3152085) GroupId=nidita(3152085) MCS_label=N/A
+   Priority=1813810 Nice=0 Account=def-a2nyi4 QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:01:55 TimeLimit=08:00:00 TimeMin=N/A
+   SubmitTime=2026-03-28T02:51:04 EligibleTime=2026-03-28T02:51:04
+   AccrueTime=2026-03-28T02:51:04
+   StartTime=2026-03-28T02:54:04 EndTime=2026-03-28T02:55:59 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-28T02:54:04 Scheduler=Main
+   Partition=compute AllocNode:Sid=tri-login04:1694760
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=tri0144
+   BatchHost=tri0144
+   NumNodes=1 NumCPUs=192 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=16,mem=767000M,node=1,billing=16
+   AllocTRES=cpu=192,mem=767000M,node=1,billing=192
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=16 MinMemoryNode=767000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/project/def-a2nyi4/nidita/pscan/working/run/run_runtime_lfr.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env run/run_runtime_lfr.sh --export=NONE --get-user-env run/run_runtime_lfr.sh
+   WorkDir=/project/def-a2nyi4/nidita/pscan/working
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env run/run_runtime_lfr.sh
+   StdErr=/scratch/nidita/logs/pscan_runtime_lfr_1246535.err
+   StdIn=/dev/null
+   StdOut=/scratch/nidita/logs/pscan_runtime_lfr_1246535.out
+   TresPerTask=cpu=16
+   MailUser=niditaroy@uvic.ca MailType=BEGIN,END,FAIL
+
+sacct -j 1246535
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+1246535      pscan_run+ def-a2nyi4   00:01:55                         00:00:00   00:00:00      0:0 
+1246535.bat+      batch def-a2nyi4   00:01:55                         00:00:00   00:00:00      0:0 
+1246535.ext+     extern def-a2nyi4   00:01:55                         00:00:00   00:00:00      0:0 
+

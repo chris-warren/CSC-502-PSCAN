@@ -1,0 +1,219 @@
+==========================================
+Job started:  Sat 28 Mar 2026 02:40:16 AM EDT
+Node:         tri0033
+Job ID:       1246517
+==========================================
+Starting Experiment 2: Runtime vs Machines...
+[main] PSCAN started
+[main] Project root : /project/def-a2nyi4/nidita/pscan/working
+[main] Output dir   : /scratch/nidita/pscan_output
+
+[Experiment 2] Runtime vs Machines
+  BA sizes  : [100000, 200000, 300000, 400000]
+  Machines  : [4, 8, 15]
+[main] Best epsilon from experiment 1: 0.4
+
+--- BA n=100,000 ---
+
+[main] Step 1: Dataset generation
+[BA] Generating ba_100000 ...
+Wrote dataset manifest to /scratch/nidita/pscan_output/manifest.json
+  Machines=4 (actual CPU workers=4)
+[main] Clustering ba_100000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_100000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_100000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_100000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_100000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 6.98s
+  Machines=8 (actual CPU workers=8)
+[main] Clustering ba_100000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_100000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_100000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_100000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_100000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 6.32s
+  Machines=15 (actual CPU workers=15)
+[main] Clustering ba_100000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_100000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_100000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_100000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_100000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 6.39s
+
+--- BA n=200,000 ---
+
+[main] Step 1: Dataset generation
+[BA] Generating ba_200000 ...
+Wrote dataset manifest to /scratch/nidita/pscan_output/manifest.json
+  Machines=4 (actual CPU workers=4)
+[main] Clustering ba_200000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_200000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_200000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_200000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_200000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 15.18s
+  Machines=8 (actual CPU workers=8)
+[main] Clustering ba_200000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_200000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_200000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_200000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_200000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 12.50s
+  Machines=15 (actual CPU workers=15)
+[main] Clustering ba_200000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_200000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_200000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_200000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_200000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 12.80s
+
+--- BA n=300,000 ---
+
+[main] Step 1: Dataset generation
+[BA] Generating ba_300000 ...
+Wrote dataset manifest to /scratch/nidita/pscan_output/manifest.json
+  Machines=4 (actual CPU workers=4)
+[main] Clustering ba_300000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_300000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_300000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_300000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_300000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 22.84s
+  Machines=8 (actual CPU workers=8)
+[main] Clustering ba_300000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_300000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_300000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_300000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_300000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 19.57s
+  Machines=15 (actual CPU workers=15)
+[main] Clustering ba_300000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_300000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_300000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_300000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_300000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 20.38s
+
+--- BA n=400,000 ---
+
+[main] Step 1: Dataset generation
+[BA] Generating ba_400000 ...
+Wrote dataset manifest to /scratch/nidita/pscan_output/manifest.json
+  Machines=4 (actual CPU workers=4)
+[main] Clustering ba_400000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_400000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_400000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_400000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_400000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 29.80s
+  Machines=8 (actual CPU workers=8)
+[main] Clustering ba_400000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_400000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_400000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_400000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_400000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 25.98s
+  Machines=15 (actual CPU workers=15)
+[main] Clustering ba_400000 (eps=0.4)
+[LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_ba_400000.sim.tsv
+[LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_ba_400000.sim.tsv
+[clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_ba_400000.sim.tsv ...
+--- Iteration 0 ---
+active change: False
+finish lpcc
+[clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/ba_400000.sim_clusters.csv
+[clustering] Total clusters: 0
+  -> 28.17s
+
+[main] Runtime results -> /scratch/nidita/pscan_output/results_runtime.csv
+[main] Could not copy results back: [Errno 13] Permission denied: '/project/def-a2nyi4/nidita/pscan/working/results_runtime.csv'
+
+[main] Finished in 231.73s
+Exit code: 0
+Experiment 2 finished: Sat 28 Mar 2026 02:44:14 AM EDT
+No results_runtime.csv to copy
+==========================================
+
+scontrol show job 1246517
+JobId=1246517 JobName=pscan_runtime
+   UserId=nidita(3152085) GroupId=nidita(3152085) MCS_label=N/A
+   Priority=1841651 Nice=0 Account=def-a2nyi4 QOS=normal
+   JobState=COMPLETING Reason=None Dependency=(null)
+   Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
+   RunTime=00:04:00 TimeLimit=08:00:00 TimeMin=N/A
+   SubmitTime=2026-03-28T02:40:13 EligibleTime=2026-03-28T02:40:13
+   AccrueTime=2026-03-28T02:40:13
+   StartTime=2026-03-28T02:40:14 EndTime=2026-03-28T02:44:14 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-28T02:40:14 Scheduler=Main
+   Partition=compute AllocNode:Sid=tri-login04:1694760
+   ReqNodeList=(null) ExcNodeList=(null)
+   NodeList=tri0033
+   BatchHost=tri0033
+   NumNodes=1 NumCPUs=192 NumTasks=1 CPUs/Task=16 ReqB:S:C:T=0:0:*:*
+   ReqTRES=cpu=16,mem=767000M,node=1,billing=16
+   AllocTRES=cpu=192,mem=767000M,node=1,billing=192
+   Socks/Node=* NtasksPerN:B:S:C=0:0:*:* CoreSpec=*
+   MinCPUsNode=16 MinMemoryNode=767000M MinTmpDiskNode=0
+   Features=(null) DelayBoot=00:00:00
+   OverSubscribe=NO Contiguous=0 Licenses=(null) LicensesAlloc=(null) Network=(null)
+   Command=/project/def-a2nyi4/nidita/pscan/working/run/run_runtime.sh
+   SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env run/run_runtime.sh --export=NONE --get-user-env run/run_runtime.sh
+   WorkDir=/project/def-a2nyi4/nidita/pscan/working
+   Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env run/run_runtime.sh
+   StdErr=/scratch/nidita/logs/pscan_runtime_1246517.err
+   StdIn=/dev/null
+   StdOut=/scratch/nidita/logs/pscan_runtime_1246517.out
+   TresPerTask=cpu=16
+   MailUser=niditaroy@uvic.ca MailType=BEGIN,END,FAIL
+
+sacct -j 1246517
+JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
+------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
+1246517      pscan_run+ def-a2nyi4   00:04:00                         00:00:00   00:00:00      0:0 
+1246517.bat+      batch def-a2nyi4   00:04:00                         00:00:00   00:00:00      0:0 
+1246517.ext+     extern def-a2nyi4   00:04:00                         00:00:00   00:00:00      0:0 
+
