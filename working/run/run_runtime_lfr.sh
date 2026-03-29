@@ -1,5 +1,5 @@
 #!/bin/bash
-#SBATCH --job-name=pscan_runtime
+#SBATCH --job-name=pscan_runtime_lfr
 #SBATCH --account=def-a2nyi4
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
@@ -35,25 +35,23 @@ mkdir -p "$OUTPUT_DIR/metadata"
 
 cd "$PROJECT_DIR"
 
-echo "Starting Experiment 2: Runtime vs Machines..."
-echo "BA sizes: 1M 2M 3M 4M"
-echo "Machines: 4 8 15 (speedup relative to 4-CPU baseline)"
+echo "Starting Runtime Experiment on LFR graphs..."
 echo "Mu: $MU"
 
-python run/main.py \
-    --experiment runtime \
+python run/main_lfr_runtime.py \
     --output-dir "$OUTPUT_DIR" \
-    --ba-sizes 1000000 2000000 3000000 4000000 \
+    --lfr-sizes 500 1000 2000 5000 10000 20000 40000 80000 160000 \
     --machines 4 8 15 \
+    --epsilon 0.4 \
     --mu "$MU" \
     --verbose
 
 EXIT_CODE=$?
 echo "Exit code: $EXIT_CODE"
-echo "Experiment 2 finished: $(date)"
+echo "LFR runtime experiment finished: $(date)"
 
-cp "$OUTPUT_DIR/results_runtime.csv" "$PROJECT_DIR/results_runtime.csv" 2>/dev/null && \
-    echo "results_runtime.csv copied" || \
-    echo "No results_runtime.csv to copy"
+cp "$OUTPUT_DIR/results_runtime_lfr.csv" "$PROJECT_DIR/results_runtime_lfr.csv" 2>/dev/null && \
+    echo "results_runtime_lfr.csv copied" || \
+    echo "No results_runtime_lfr.csv to copy"
 
 echo "=========================================="

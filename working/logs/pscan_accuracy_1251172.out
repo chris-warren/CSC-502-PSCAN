@@ -1,12 +1,14 @@
 ==========================================
-Job started:  Sat 28 Mar 2026 02:31:15 AM EDT
-Node:         tri0999
-Job ID:       1246499
+Job started:  Sun 29 Mar 2026 06:00:40 PM EDT
+Node:         tri0867
+Job ID:       1251172
 ==========================================
 Starting Experiment 1: Accuracy vs Epsilon...
+Mu: 5
 [main] PSCAN started
 [main] Project root : /project/def-a2nyi4/nidita/pscan/working
 [main] Output dir   : /scratch/nidita/pscan_output
+[main] Mu           : 5
 
 [main] Step 1: Dataset generation
 [LFR] Generating lfr_500 ...
@@ -17,6 +19,7 @@ Wrote dataset manifest to /scratch/nidita/pscan_output/manifest.json
 [Experiment 1] Accuracy vs Epsilon
   LFR sizes : [500, 1000, 2000]
   Epsilons  : [0.2, 0.4, 0.6, 0.8, 1.0]
+  Mu        : 5
 [main] Similarity: lfr_1000.adjlist
 [main] Similarity: lfr_10000.adjlist
 [main] Similarity: lfr_160000.adjlist
@@ -28,7 +31,7 @@ Wrote dataset manifest to /scratch/nidita/pscan_output/manifest.json
 [main] Similarity: lfr_80000.adjlist
 
 --- eps=0.2 ---
-[main] Clustering lfr_1000 (eps=0.2)
+[main] Clustering lfr_1000 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_1000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv ...
@@ -77,7 +80,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_1000.sim_clusters.csv
 [clustering] Total clusters: 9
-[main] Clustering lfr_10000 (eps=0.2)
+[clustering] Core: 979  Hub: 0  Outlier: 19
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_1000.sim_classification.tsv
+[main] Clustering lfr_10000 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_10000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv ...
@@ -102,7 +107,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_10000.sim_clusters.csv
 [clustering] Total clusters: 194
-[main] Clustering lfr_160000 (eps=0.2)
+[clustering] Core: 9,909  Hub: 0  Outlier: 90
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_10000.sim_classification.tsv
+[main] Clustering lfr_160000 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_160000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv ...
@@ -141,7 +148,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_160000.sim_clusters.csv
 [clustering] Total clusters: 3120
-[main] Clustering lfr_2000 (eps=0.2)
+[clustering] Core: 158,360  Hub: 0  Outlier: 1,613
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_160000.sim_classification.tsv
+[main] Clustering lfr_2000 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_2000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv ...
@@ -178,7 +187,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_2000.sim_clusters.csv
 [clustering] Total clusters: 26
-[main] Clustering lfr_20000 (eps=0.2)
+[clustering] Core: 1,988  Hub: 0  Outlier: 12
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_2000.sim_classification.tsv
+[main] Clustering lfr_20000 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_20000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv ...
@@ -207,7 +218,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_20000.sim_clusters.csv
 [clustering] Total clusters: 374
-[main] Clustering lfr_40000 (eps=0.2)
+[clustering] Core: 19,767  Hub: 0  Outlier: 231
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_20000.sim_classification.tsv
+[main] Clustering lfr_40000 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_40000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv ...
@@ -252,7 +265,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_40000.sim_clusters.csv
 [clustering] Total clusters: 779
-[main] Clustering lfr_500 (eps=0.2)
+[clustering] Core: 39,553  Hub: 0  Outlier: 437
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_40000.sim_classification.tsv
+[main] Clustering lfr_500 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_500.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv ...
@@ -279,7 +294,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_500.sim_clusters.csv
 [clustering] Total clusters: 3
-[main] Clustering lfr_5000 (eps=0.2)
+[clustering] Core: 498  Hub: 0  Outlier: 2
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_500.sim_classification.tsv
+[main] Clustering lfr_5000 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_5000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv ...
@@ -320,7 +337,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_5000.sim_clusters.csv
 [clustering] Total clusters: 78
-[main] Clustering lfr_80000 (eps=0.2)
+[clustering] Core: 4,946  Hub: 0  Outlier: 54
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_5000.sim_classification.tsv
+[main] Clustering lfr_80000 (eps=0.2, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_80000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv ...
@@ -359,6 +378,8 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_80000.sim_clusters.csv
 [clustering] Total clusters: 1524
+[clustering] Core: 79,025  Hub: 0  Outlier: 958
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_80000.sim_classification.tsv
 [evaluate] Ground truth nodes : 1000
 [evaluate] Predicted nodes    : 998
 [evaluate] Matched nodes      : 998
@@ -430,7 +451,7 @@ ARI: 0.8369
 NMI: 0.9848
 
 --- eps=0.4 ---
-[main] Clustering lfr_1000 (eps=0.4)
+[main] Clustering lfr_1000 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_1000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv ...
@@ -455,7 +476,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_1000.sim_clusters.csv
 [clustering] Total clusters: 44
-[main] Clustering lfr_10000 (eps=0.4)
+[clustering] Core: 411  Hub: 0  Outlier: 352
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_1000.sim_classification.tsv
+[main] Clustering lfr_10000 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_10000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv ...
@@ -484,7 +507,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_10000.sim_clusters.csv
 [clustering] Total clusters: 347
-[main] Clustering lfr_160000 (eps=0.4)
+[clustering] Core: 5,121  Hub: 0  Outlier: 3,443
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_10000.sim_classification.tsv
+[main] Clustering lfr_160000 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_160000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv ...
@@ -517,7 +542,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_160000.sim_clusters.csv
 [clustering] Total clusters: 6262
-[main] Clustering lfr_2000 (eps=0.4)
+[clustering] Core: 79,538  Hub: 0  Outlier: 53,998
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_160000.sim_classification.tsv
+[main] Clustering lfr_2000 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_2000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv ...
@@ -540,7 +567,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_2000.sim_clusters.csv
 [clustering] Total clusters: 77
-[main] Clustering lfr_20000 (eps=0.4)
+[clustering] Core: 1,143  Hub: 0  Outlier: 599
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_2000.sim_classification.tsv
+[main] Clustering lfr_20000 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_20000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv ...
@@ -569,7 +598,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_20000.sim_clusters.csv
 [clustering] Total clusters: 835
-[main] Clustering lfr_40000 (eps=0.4)
+[clustering] Core: 9,514  Hub: 0  Outlier: 6,975
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_20000.sim_classification.tsv
+[main] Clustering lfr_40000 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_40000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv ...
@@ -604,7 +635,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_40000.sim_clusters.csv
 [clustering] Total clusters: 1520
-[main] Clustering lfr_500 (eps=0.4)
+[clustering] Core: 20,128  Hub: 0  Outlier: 13,326
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_40000.sim_classification.tsv
+[main] Clustering lfr_500 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_500.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv ...
@@ -625,7 +658,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_500.sim_clusters.csv
 [clustering] Total clusters: 16
-[main] Clustering lfr_5000 (eps=0.4)
+[clustering] Core: 251  Hub: 0  Outlier: 193
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_500.sim_classification.tsv
+[main] Clustering lfr_5000 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_5000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv ...
@@ -652,7 +687,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_5000.sim_clusters.csv
 [clustering] Total clusters: 195
-[main] Clustering lfr_80000 (eps=0.4)
+[clustering] Core: 2,307  Hub: 0  Outlier: 1,765
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_5000.sim_classification.tsv
+[main] Clustering lfr_80000 (eps=0.4, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_80000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv ...
@@ -691,6 +728,8 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_80000.sim_clusters.csv
 [clustering] Total clusters: 3272
+[clustering] Core: 38,128  Hub: 0  Outlier: 27,723
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_80000.sim_classification.tsv
 [evaluate] Ground truth nodes : 1000
 [evaluate] Predicted nodes    : 763
 [evaluate] Matched nodes      : 763
@@ -765,7 +804,7 @@ ARI: 0.9484
 NMI: 0.9867
 
 --- eps=0.6 ---
-[main] Clustering lfr_1000 (eps=0.6)
+[main] Clustering lfr_1000 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_1000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv ...
@@ -784,7 +823,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_1000.sim_clusters.csv
 [clustering] Total clusters: 30
-[main] Clustering lfr_10000 (eps=0.6)
+[clustering] Core: 28  Hub: 0  Outlier: 151
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_1000.sim_classification.tsv
+[main] Clustering lfr_10000 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_10000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv ...
@@ -805,7 +846,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_10000.sim_clusters.csv
 [clustering] Total clusters: 359
-[main] Clustering lfr_160000 (eps=0.6)
+[clustering] Core: 312  Hub: 0  Outlier: 1,680
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_10000.sim_classification.tsv
+[main] Clustering lfr_160000 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_160000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv ...
@@ -832,7 +875,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_160000.sim_clusters.csv
 [clustering] Total clusters: 5312
-[main] Clustering lfr_2000 (eps=0.6)
+[clustering] Core: 7,702  Hub: 0  Outlier: 26,338
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_160000.sim_classification.tsv
+[main] Clustering lfr_2000 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_2000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv ...
@@ -853,7 +898,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_2000.sim_clusters.csv
 [clustering] Total clusters: 74
-[main] Clustering lfr_20000 (eps=0.6)
+[clustering] Core: 129  Hub: 0  Outlier: 367
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_2000.sim_classification.tsv
+[main] Clustering lfr_20000 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_20000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv ...
@@ -874,7 +921,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_20000.sim_clusters.csv
 [clustering] Total clusters: 658
-[main] Clustering lfr_40000 (eps=0.6)
+[clustering] Core: 908  Hub: 0  Outlier: 3,245
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_20000.sim_classification.tsv
+[main] Clustering lfr_40000 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_40000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv ...
@@ -897,7 +946,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_40000.sim_clusters.csv
 [clustering] Total clusters: 1331
-[main] Clustering lfr_500 (eps=0.6)
+[clustering] Core: 1,813  Hub: 0  Outlier: 6,695
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_40000.sim_classification.tsv
+[main] Clustering lfr_500 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_500.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv ...
@@ -912,7 +963,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_500.sim_clusters.csv
 [clustering] Total clusters: 20
-[main] Clustering lfr_5000 (eps=0.6)
+[clustering] Core: 1  Hub: 0  Outlier: 69
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_500.sim_classification.tsv
+[main] Clustering lfr_5000 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_5000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv ...
@@ -931,7 +984,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_5000.sim_clusters.csv
 [clustering] Total clusters: 134
-[main] Clustering lfr_80000 (eps=0.6)
+[clustering] Core: 264  Hub: 0  Outlier: 730
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_5000.sim_classification.tsv
+[main] Clustering lfr_80000 (eps=0.6, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_80000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv ...
@@ -956,6 +1011,8 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_80000.sim_clusters.csv
 [clustering] Total clusters: 2581
+[clustering] Core: 3,634  Hub: 0  Outlier: 12,594
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_80000.sim_classification.tsv
 [evaluate] Ground truth nodes : 1000
 [evaluate] Predicted nodes    : 179
 [evaluate] Matched nodes      : 179
@@ -1030,7 +1087,7 @@ ARI: 0.8961
 NMI: 0.9769
 
 --- eps=0.8 ---
-[main] Clustering lfr_1000 (eps=0.8)
+[main] Clustering lfr_1000 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_1000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv ...
@@ -1041,7 +1098,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_1000.sim_clusters.csv
 [clustering] Total clusters: 1
-[main] Clustering lfr_10000 (eps=0.8)
+[clustering] Core: 0  Hub: 0  Outlier: 2
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_1000.sim_classification.tsv
+[main] Clustering lfr_10000 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_10000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv ...
@@ -1052,7 +1111,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_10000.sim_clusters.csv
 [clustering] Total clusters: 15
-[main] Clustering lfr_160000 (eps=0.8)
+[clustering] Core: 0  Hub: 0  Outlier: 31
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_10000.sim_classification.tsv
+[main] Clustering lfr_160000 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_160000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv ...
@@ -1069,7 +1130,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_160000.sim_clusters.csv
 [clustering] Total clusters: 350
-[main] Clustering lfr_2000 (eps=0.8)
+[clustering] Core: 0  Hub: 0  Outlier: 823
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_160000.sim_classification.tsv
+[main] Clustering lfr_2000 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_2000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv ...
@@ -1082,7 +1145,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_2000.sim_clusters.csv
 [clustering] Total clusters: 5
-[main] Clustering lfr_20000 (eps=0.8)
+[clustering] Core: 0  Hub: 0  Outlier: 12
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_2000.sim_classification.tsv
+[main] Clustering lfr_20000 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_20000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv ...
@@ -1097,7 +1162,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_20000.sim_clusters.csv
 [clustering] Total clusters: 47
-[main] Clustering lfr_40000 (eps=0.8)
+[clustering] Core: 0  Hub: 0  Outlier: 107
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_20000.sim_classification.tsv
+[main] Clustering lfr_40000 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_40000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv ...
@@ -1110,7 +1177,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_40000.sim_clusters.csv
 [clustering] Total clusters: 78
-[main] Clustering lfr_500 (eps=0.8)
+[clustering] Core: 0  Hub: 0  Outlier: 176
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_40000.sim_classification.tsv
+[main] Clustering lfr_500 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_500.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv ...
@@ -1119,7 +1188,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_500.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_5000 (eps=0.8)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_500.sim_classification.tsv
+[main] Clustering lfr_5000 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_5000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv ...
@@ -1132,7 +1203,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_5000.sim_clusters.csv
 [clustering] Total clusters: 16
-[main] Clustering lfr_80000 (eps=0.8)
+[clustering] Core: 0  Hub: 0  Outlier: 35
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_5000.sim_classification.tsv
+[main] Clustering lfr_80000 (eps=0.8, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_80000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv ...
@@ -1147,6 +1220,8 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_80000.sim_clusters.csv
 [clustering] Total clusters: 160
+[clustering] Core: 1  Hub: 0  Outlier: 376
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_80000.sim_classification.tsv
 [evaluate] Ground truth nodes : 1000
 [evaluate] Predicted nodes    : 2
 [evaluate] Matched nodes      : 2
@@ -1217,7 +1292,7 @@ ARI: 0.9658
 NMI: 0.9971
 
 --- eps=1.0 ---
-[main] Clustering lfr_1000 (eps=1.0)
+[main] Clustering lfr_1000 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_1000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_1000.sim.tsv ...
@@ -1226,7 +1301,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_1000.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_10000 (eps=1.0)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_1000.sim_classification.tsv
+[main] Clustering lfr_10000 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_10000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_10000.sim.tsv ...
@@ -1235,7 +1312,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_10000.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_160000 (eps=1.0)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_10000.sim_classification.tsv
+[main] Clustering lfr_160000 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_160000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_160000.sim.tsv ...
@@ -1244,7 +1323,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_160000.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_2000 (eps=1.0)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_160000.sim_classification.tsv
+[main] Clustering lfr_2000 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_2000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_2000.sim.tsv ...
@@ -1253,7 +1334,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_2000.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_20000 (eps=1.0)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_2000.sim_classification.tsv
+[main] Clustering lfr_20000 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_20000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_20000.sim.tsv ...
@@ -1262,7 +1345,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_20000.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_40000 (eps=1.0)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_20000.sim_classification.tsv
+[main] Clustering lfr_40000 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_40000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_40000.sim.tsv ...
@@ -1271,7 +1356,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_40000.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_500 (eps=1.0)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_40000.sim_classification.tsv
+[main] Clustering lfr_500 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_500.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_500.sim.tsv ...
@@ -1280,7 +1367,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_500.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_5000 (eps=1.0)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_500.sim_classification.tsv
+[main] Clustering lfr_5000 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_5000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_5000.sim.tsv ...
@@ -1289,7 +1378,9 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_5000.sim_clusters.csv
 [clustering] Total clusters: 0
-[main] Clustering lfr_80000 (eps=1.0)
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_5000.sim_classification.tsv
+[main] Clustering lfr_80000 (eps=1.0, mu=5)
 [LPSS] Filtered graph saved -> /scratch/nidita/pscan_output/filtered_adjlists/filtered_edge_lfr_80000.sim.tsv
 [LPSS] LPCC input saved -> /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv
 [clustering] Running LPCC on /scratch/nidita/pscan_output/parsed_input/parse_lfr_80000.sim.tsv ...
@@ -1298,6 +1389,8 @@ active change: False
 finish lpcc
 [clustering] Clusters saved -> /scratch/nidita/pscan_output/clusters/lfr_80000.sim_clusters.csv
 [clustering] Total clusters: 0
+[clustering] Core: 0  Hub: 0  Outlier: 0
+[hub_outlier] Saved → /scratch/nidita/pscan_output/classifications/lfr_80000.sim_classification.tsv
 [evaluate] Ground truth nodes : 1000
 [evaluate] Predicted nodes    : 0
 [evaluate] Matched nodes      : 0
@@ -1335,30 +1428,86 @@ finish lpcc
 [evaluate] Matched nodes      : 0
 [evaluate] WARNING: No matching nodes — returning ARI=0, NMI=0
 
+[main] Saving best-epsilon output files...
+[main] lfr_1000: best epsilon=0.8 (ARI=1.0000)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_1000_best_eps0.8_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_1000_best_eps0.8_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_1000_best_eps0.8_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_1000_best_eps0.8_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_1000_labels.tsv
+[main] lfr_10000: best epsilon=0.8 (ARI=1.0000)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_10000_best_eps0.8_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_10000_best_eps0.8_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_10000_best_eps0.8_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_10000_best_eps0.8_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_10000_labels.tsv
+[main] lfr_160000: best epsilon=0.4 (ARI=0.9533)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_160000_best_eps0.4_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_160000_best_eps0.4_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_160000_best_eps0.4_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_160000_best_eps0.4_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_160000_labels.tsv
+[main] lfr_2000: best epsilon=0.8 (ARI=1.0000)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_2000_best_eps0.8_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_2000_best_eps0.8_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_2000_best_eps0.8_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_2000_best_eps0.8_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_2000_labels.tsv
+[main] lfr_20000: best epsilon=0.8 (ARI=1.0000)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_20000_best_eps0.8_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_20000_best_eps0.8_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_20000_best_eps0.8_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_20000_best_eps0.8_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_20000_labels.tsv
+[main] lfr_40000: best epsilon=0.8 (ARI=0.9756)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_40000_best_eps0.8_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_40000_best_eps0.8_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_40000_best_eps0.8_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_40000_best_eps0.8_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_40000_labels.tsv
+[main] lfr_500: best epsilon=0.4 (ARI=0.9663)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_500_best_eps0.4_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_500_best_eps0.4_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_500_best_eps0.4_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_500_best_eps0.4_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_500_labels.tsv
+[main] lfr_5000: best epsilon=0.4 (ARI=0.9522)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_5000_best_eps0.4_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_5000_best_eps0.4_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_5000_best_eps0.4_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_5000_best_eps0.4_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_5000_labels.tsv
+[main] lfr_80000: best epsilon=0.8 (ARI=0.9658)
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_80000_best_eps0.8_clusters.csv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_80000_best_eps0.8_filtered_adjlist.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_80000_best_eps0.8_parsed_input.tsv
+[main] Best-epsilon file saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_80000_best_eps0.8_classification.tsv
+[main] Ground truth labels saved -> /scratch/nidita/pscan_output/best_epsilon/lfr_80000_labels.tsv
+
 [main] Accuracy results -> /scratch/nidita/pscan_output/results_accuracy.csv
 [main] Could not copy results back: [Errno 13] Permission denied: '/project/def-a2nyi4/nidita/pscan/working/results_accuracy.csv'
 
-[main] Finished in 63.03s
+[main] Finished in 63.16s
 Exit code: 0
-Experiment 1 finished: Sat 28 Mar 2026 02:32:25 AM EDT
+Experiment 1 finished: Sun 29 Mar 2026 06:01:48 PM EDT
 No results_accuracy.csv to copy
 ==========================================
 
-scontrol show job 1246499
-JobId=1246499 JobName=pscan_accuracy
+scontrol show job 1251172
+JobId=1251172 JobName=pscan_accuracy
    UserId=nidita(3152085) GroupId=nidita(3152085) MCS_label=N/A
-   Priority=1867690 Nice=0 Account=def-a2nyi4 QOS=normal
+   Priority=1832699 Nice=0 Account=def-a2nyi4 QOS=normal
    JobState=COMPLETING Reason=None Dependency=(null)
    Requeue=0 Restarts=0 BatchFlag=1 Reboot=0 ExitCode=0:0
-   RunTime=00:01:28 TimeLimit=04:00:00 TimeMin=N/A
-   SubmitTime=2026-03-28T02:29:45 EligibleTime=2026-03-28T02:29:45
-   AccrueTime=2026-03-28T02:29:45
-   StartTime=2026-03-28T02:30:57 EndTime=2026-03-28T02:32:25 Deadline=N/A
-   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-28T02:30:57 Scheduler=Main
-   Partition=compute AllocNode:Sid=tri-login04:1694760
+   RunTime=00:01:10 TimeLimit=04:00:00 TimeMin=N/A
+   SubmitTime=2026-03-29T17:59:51 EligibleTime=2026-03-29T17:59:51
+   AccrueTime=2026-03-29T17:59:51
+   StartTime=2026-03-29T18:00:38 EndTime=2026-03-29T18:01:48 Deadline=N/A
+   SuspendTime=None SecsPreSuspend=0 LastSchedEval=2026-03-29T18:00:38 Scheduler=Main
+   Partition=compute AllocNode:Sid=tri-login04:3058762
    ReqNodeList=(null) ExcNodeList=(null)
-   NodeList=tri0999
-   BatchHost=tri0999
+   NodeList=tri0867
+   BatchHost=tri0867
    NumNodes=1 NumCPUs=192 NumTasks=1 CPUs/Task=8 ReqB:S:C:T=0:0:*:*
    ReqTRES=cpu=8,mem=767000M,node=1,billing=8
    AllocTRES=cpu=192,mem=767000M,node=1,billing=192
@@ -1370,16 +1519,16 @@ JobId=1246499 JobName=pscan_accuracy
    SubmitLine=SBATCH --comment /opt/slurm/bin/sbatch --export=NONE --get-user-env run/run_accuracy.sh --export=NONE --get-user-env run/run_accuracy.sh
    WorkDir=/project/def-a2nyi4/nidita/pscan/working
    Comment=/opt/slurm/bin/sbatch --export=NONE --get-user-env run/run_accuracy.sh
-   StdErr=/scratch/nidita/logs/pscan_accuracy_1246499.err
+   StdErr=/scratch/nidita/logs/pscan_accuracy_1251172.err
    StdIn=/dev/null
-   StdOut=/scratch/nidita/logs/pscan_accuracy_1246499.out
+   StdOut=/scratch/nidita/logs/pscan_accuracy_1251172.out
    TresPerTask=cpu=8
    MailUser=niditaroy@uvic.ca MailType=BEGIN,END,FAIL
 
-sacct -j 1246499
+sacct -j 1251172
 JobID           JobName    Account    Elapsed  MaxVMSize     MaxRSS  SystemCPU    UserCPU ExitCode 
 ------------ ---------- ---------- ---------- ---------- ---------- ---------- ---------- -------- 
-1246499      pscan_acc+ def-a2nyi4   00:01:28                         00:00:00   00:00:00      0:0 
-1246499.bat+      batch def-a2nyi4   00:01:28                         00:00:00   00:00:00      0:0 
-1246499.ext+     extern def-a2nyi4   00:01:28                         00:00:00   00:00:00      0:0 
+1251172      pscan_acc+ def-a2nyi4   00:01:10                         00:00:00   00:00:00      0:0 
+1251172.bat+      batch def-a2nyi4   00:01:10                         00:00:00   00:00:00      0:0 
+1251172.ext+     extern def-a2nyi4   00:01:10                         00:00:00   00:00:00      0:0 
 

@@ -2,9 +2,10 @@
 """
 Hub and Outlier Detection for PSCAN.
 
-After LPCC clustering, nodes not present in any cluster are classified as:
-  - Hub     : connected to 2+ distinct clusters
-  - Outlier : connected to 0 or 1 cluster
+After LPCC clustering, nodes are classified as:
+  - Core    : degree in pruned graph >= μ
+  - Hub     : not core, connected to 2+ distinct clusters
+  - Outlier : not core, connected to 0 or 1 cluster
 
 Mirrors Section 3.4 of the PSCAN paper.
 
@@ -15,6 +16,7 @@ Usage (CLI):
     python hub_outlier.py \
         --adjlist  data/output/adjlists/lfr_5000.adjlist \
         --clusters data/output/clusters/lfr_5000_clusters.csv \
+        --mu       5 \
         --output   data/output/classifications/lfr_5000.types.tsv
 """
 
@@ -40,30 +42,38 @@ OUTLIER = "outlier"
 def detect(
     node_labels: Dict[int, int],
     adj: Dict[int, List[int]],
+    mu: int = 1,
 ) -> Dict[int, str]:
     """Classify every node as core, hub, or outlier.
 
     Parameters
     ----------
     node_labels : dict
-        {node_id: cluster_label} for nodes assigned by LPCC (core members).
+        {node_id: cluster_label} for all nodes assigned by LPCC.
     adj : dict
-        Open adjacency list {node_id: [neighbor_ids]}.
+        Pruned adjacency list {node_id: [neighbor_ids]} (after epsilon filtering).
+    mu : int
+        Minimum number of neighbors in the pruned graph required to be a core node.
 
     Returns
     -------
     dict
         {node_id: "core" | "hub" | "outlier"} for every node in adj.
     """
-    core_nodes: Set[int] = set(node_labels.keys())
     classification: Dict[int, str] = {}
 
+    # Step 1: classify cores — degree in pruned graph >= mu
     for node in adj:
-        if node in core_nodes:
+        neighbors = adj.get(node, [])
+        if len(neighbors) >= mu:
             classification[node] = CORE
+
+    # Step 2 & 3: classify remaining nodes as hub or outlier
+    for node in adj:
+        if classification.get(node) == CORE:
             continue
 
-        # Collect distinct cluster labels reachable from this node
+        # Collect distinct cluster labels from ALL neighbors (not just cores)
         neighbour_clusters: Set[int] = set()
         for nbr in adj.get(node, []):
             if nbr in node_labels:
@@ -89,7 +99,7 @@ def summary(classification: Dict[int, str]) -> Dict[str, int]:
     return counts
 
 
-def nodes_by_type(classification: Dict[str, List[int]]) -> Dict[str, List[int]]:
+def nodes_by_type(classification: Dict[int, str]) -> Dict[str, List[int]]:
     """Return {type: sorted list of node ids}."""
     groups: Dict[str, List[int]] = defaultdict(list)
     for node, t in classification.items():
@@ -163,9 +173,11 @@ def parse_args() -> argparse.Namespace:
         description="PSCAN hub and outlier detection."
     )
     parser.add_argument("--adjlist",  "-a", type=Path, required=True,
-                        help="Adjacency list file (.adjlist).")
+                        help="Pruned adjacency list file (.adjlist) after epsilon filtering.")
     parser.add_argument("--clusters", "-c", type=Path, required=True,
                         help="Cluster CSV from LPSS_main.")
+    parser.add_argument("--mu",       "-m", type=int, default=1,
+                        help="Minimum neighbors in pruned graph to be a core node.")
     parser.add_argument("--output",   "-o", type=Path, default=None,
                         help="Output classification TSV.")
     parser.add_argument("--verbose",  "-v", action="store_true")
@@ -183,7 +195,10 @@ def main() -> None:
         print(f"[hub_outlier] Loading clusters: {args.clusters}")
     node_labels = load_clusters_csv(args.clusters)
 
-    classification = detect(node_labels, adj)
+    if args.verbose:
+        print(f"[hub_outlier] mu = {args.mu}")
+
+    classification = detect(node_labels, adj, mu=args.mu)
     counts = summary(classification)
 
     print(f"[hub_outlier] Core: {counts[CORE]:,}  "

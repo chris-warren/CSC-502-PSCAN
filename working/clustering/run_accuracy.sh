@@ -16,42 +16,48 @@ echo "Node:         $SLURMD_NODENAME"
 echo "Job ID:       $SLURM_JOB_ID"
 echo "=========================================="
 
+# ── Environment ───────────────────────────────────────────────────────────────
 module purge
 module load python/3.11
 module load scipy-stack
+
 source /project/def-a2nyi4/nidita/pscan/venv/bin/activate
 
+# ── Paths ─────────────────────────────────────────────────────────────────────
 PROJECT_DIR="/project/def-a2nyi4/nidita/pscan/working"
 OUTPUT_DIR="/scratch/nidita/pscan_output"
-MU=5
 
+# Create all output folders on scratch
 mkdir -p /scratch/nidita/logs
 mkdir -p "$OUTPUT_DIR/adjlists"
 mkdir -p "$OUTPUT_DIR/labels"
 mkdir -p "$OUTPUT_DIR/clusters"
+mkdir -p "$OUTPUT_DIR/classifications"
 mkdir -p "$OUTPUT_DIR/filtered_adjlists"
 mkdir -p "$OUTPUT_DIR/parsed_input"
 mkdir -p "$OUTPUT_DIR/metadata"
 
 cd "$PROJECT_DIR"
 
+# ── Run Experiment 1 ──────────────────────────────────────────────────────────
 echo "Starting Experiment 1: Accuracy vs Epsilon..."
-echo "Mu: $MU"
 
 python run/main.py \
     --experiment accuracy \
     --output-dir "$OUTPUT_DIR" \
     --lfr-sizes 500 1000 2000 \
     --eps-list 0.2 0.4 0.6 0.8 1.0 \
-    --mu "$MU" \
     --verbose
 
 EXIT_CODE=$?
+
+echo ""
 echo "Exit code: $EXIT_CODE"
 echo "Experiment 1 finished: $(date)"
 
+# ── Copy results back to working folder ───────────────────────────────────────
 cp "$OUTPUT_DIR/results_accuracy.csv" "$PROJECT_DIR/results_accuracy.csv" 2>/dev/null && \
-    echo "results_accuracy.csv copied" || \
-    echo "No results_accuracy.csv to copy"
+    echo "results_accuracy.csv copied to $PROJECT_DIR" || \
+    echo "No results_accuracy.csv found to copy"
 
 echo "=========================================="
