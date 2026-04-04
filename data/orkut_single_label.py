@@ -62,7 +62,7 @@ def write_labels(labels, output_path):
 
 if __name__ == "__main__":
     adjlist_path = "orkut.adjlist"
-    cmty_path = "com-orkut.top5000.cmty.txt"   # or com-orkut.all.cmty.txt
+    cmty_path = "com-orkut.all.cmty.txt"   # or com-orkut.top5000.cmty.txt
     output_path = "orkut_single_labels.tsv"
 
     all_nodes = read_nodes_from_adjlist(adjlist_path)
