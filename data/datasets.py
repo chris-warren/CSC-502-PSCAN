@@ -40,6 +40,8 @@ import networkx as nx
 
 PAPER_LFR_SIZES = [5_000, 10_000, 20_000, 40_000, 80_000, 160_000]
 PAPER_BA_SIZES = [1_000_000, 2_000_000, 3_000_000, 4_000_000]
+PAPER_BA_EDGES = [14, 14, 12, 15]
+PAPER_BA_CGS = [15, 15, 13, 16]
 
 
 @dataclass
@@ -60,39 +62,53 @@ class DatasetStats:
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate PSCAN datasets.")
-    parser.add_argument("--output-dir", type=Path, default=Path("./data"))
+    parser.add_argument("--output_dir", type=Path, default=Path("./data"))
     parser.add_argument("--seed", type=int, default=42)
 
     parser.add_argument(
-        "--paper-scales",
+        "--paper_scales",
         action="store_true",
         help="Use the graph sizes reported in the PSCAN paper.",
     )
     parser.add_argument(
-        "--lfr-sizes",
+        "--lfr_sizes",
         type=int,
         nargs="*",
         default=None,
         help="Node counts for LFR graphs.",
     )
     parser.add_argument(
-        "--ba-sizes",
+        "--ba_sizes",
         type=int,
         nargs="*",
         default=None,
         help="Node counts for BA graphs.",
+    )
+    parser.add_argument(
+        "--ba_edges",
+        type=int,
+        nargs="*",
+        default=None,
+        help="Edge counts for BA graphs.",
+    )
+    parser.add_argument(
+        "--ba_cgs",
+        type=int,
+        nargs="*",
+        default=None,
+        help="Node counts for initial complete graph for BA graphs.",
     )
 
     # LFR parameters
     parser.add_argument("--tau1", type=float, default=3.0, help="Degree exponent.")
     parser.add_argument("--tau2", type=float, default=1.5, help="Community-size exponent.")
     parser.add_argument("--mu", type=float, default=0.1, help="Mixing parameter.")
-    parser.add_argument("--average-degree", type=int, default=15)
-    parser.add_argument("--max-degree", type=int, default=75)
-    parser.add_argument("--min-community", type=int, default=20)
-    parser.add_argument("--max-community", type=int, default=100)
+    parser.add_argument("--average_degree", type=float, default=15)
+    parser.add_argument("--max_degree", type=int, default=75)
+    parser.add_argument("--min_community", type=int, default=20)
+    parser.add_argument("--max_community", type=int, default=100)
     parser.add_argument(
-        "--lfr-max-retries",
+        "--lfr_max_retries",
         type=int,
         default=10,
         help="Retry budget for LFR generation, since the generator may fail for some seeds.",
@@ -100,19 +116,19 @@ def parse_args() -> argparse.Namespace:
 
     # BA parameters
     parser.add_argument(
-        "--ba-m",
+        "--ba_m",
         type=int,
         default=7,
         help="Number of edges to attach from each new node in BA generation.",
     )
 
     parser.add_argument(
-        "--skip-lfr",
+        "--skip_lfr",
         action="store_true",
         help="Skip LFR generation.",
     )
     parser.add_argument(
-        "--skip-ba",
+        "--skip_ba",
         action="store_true",
         help="Skip BA generation.",
     )
@@ -123,19 +139,29 @@ def parse_args() -> argparse.Namespace:
 def resolve_sizes(args: argparse.Namespace) -> Tuple[List[int], List[int]]:
     lfr_sizes = args.lfr_sizes
     ba_sizes = args.ba_sizes
+    ba_edges = args.ba_edges
+    ba_cgs = args.ba_cgs
 
     if args.paper_scales:
         if lfr_sizes is None:
             lfr_sizes = PAPER_LFR_SIZES
         if ba_sizes is None:
             ba_sizes = PAPER_BA_SIZES
+        if ba_edges is None:
+            ba_edges = PAPER_BA_EDGES
+        if ba_cgs is None:
+            ba_cgs = PAPER_BA_CGS
 
     if lfr_sizes is None:
-        lfr_sizes = [5_000, 10_000]
+        lfr_sizes = []
     if ba_sizes is None:
-        ba_sizes = [100_000, 200_000]
+        ba_sizes = []
+    if ba_edges is None:
+        ba_edges = []
+    if ba_cgs is None:
+        ba_cgs = []
 
-    return sorted(set(lfr_sizes)), sorted(set(ba_sizes))
+    return lfr_sizes, ba_sizes, ba_edges, ba_cgs
 
 
 def ensure_simple_undirected_graph(graph: nx.Graph) -> nx.Graph:
@@ -157,7 +183,7 @@ def generate_lfr_graph(
     tau1: float,
     tau2: float,
     mu: float,
-    average_degree: int,
+    average_degree: float,
     max_degree: int,
     min_community: int,
     max_community: int,
@@ -169,6 +195,27 @@ def generate_lfr_graph(
     for attempt in range(max_retries):
         seed = base_seed + attempt
         try:
+            targets = {
+                5000:   {"tau1": 3.0, "tau2": 3.0, "avg_deg": 12, "max_deg": 50, "clusters": 278, "min_comm": 10, "max_comm": 50},
+                10000:  {"tau1": 3.0, "tau2": 3.0, "avg_deg": 13, "max_deg": 50, "clusters": 598, "min_comm": 10, "max_comm": 50},
+                20000:  {"tau1": 3.0, "tau2": 3.0, "avg_deg": 13, "max_deg": 50, "clusters": 1008, "min_comm": 10, "max_comm": 50},
+                40000:  {"tau1": 3.0, "tau2": 3.0, "avg_deg": 13, "max_deg": 50, "clusters": 2030, "min_comm": 10, "max_comm": 50},
+                80000:  {"tau1": 3.0, "tau2": 3.0, "avg_deg": 13, "max_deg": 50, "clusters": 3876, "min_comm": 10, "max_comm": 50},
+                160000: {"tau1": 3.0, "tau2": 3.0, "avg_deg": 28, "max_deg": 150, "clusters": 4115, "min_comm": 10, "max_comm": 120},
+            }
+            '''
+            graph = nx.generators.community.LFR_benchmark_graph(
+                n=n,
+                tau1=targets[n]["tau1"],
+                tau2=targets[n]["tau2"],
+                mu=0.1,
+                average_degree=targets[n]["avg_deg"],
+                max_degree=targets[n]["max_deg"],
+                min_community=targets[n]["min_comm"],
+                max_community=targets[n]["max_comm"],
+                seed=seed,
+            )
+            '''
             graph = nx.generators.community.LFR_benchmark_graph(
                 n=n,
                 tau1=tau1,
@@ -180,6 +227,7 @@ def generate_lfr_graph(
                 max_community=max_community,
                 seed=seed,
             )
+
             graph = ensure_simple_undirected_graph(graph)
             return graph, seed
         except Exception as exc:
@@ -267,8 +315,14 @@ def dump_json(data: dict, path: Path) -> None:
         f.write("\n")
 
 
-def generate_ba_graph(n: int, *, m: int, seed: int) -> nx.Graph:
-    graph = nx.barabasi_albert_graph(n=n, m=m, seed=seed)
+def generate_ba_graph(n: int, *, m: int, cg_n: int, seed: int) -> nx.Graph:
+    #graph = nx.barabasi_albert_graph(n=n, m=m, seed=seed)
+    graph = nx.barabasi_albert_graph(
+                n=n,
+                m=m,
+                initial_graph=nx.complete_graph(cg_n),
+                seed=seed,
+            )
     return ensure_simple_undirected_graph(graph)
 
 
@@ -290,7 +344,7 @@ def relative_to_root(path: Path, root: Path) -> str:
 
 def main() -> None:
     args = parse_args()
-    lfr_sizes, ba_sizes = resolve_sizes(args)
+    lfr_sizes, ba_sizes, ba_edges, ba_cgs = resolve_sizes(args)
     output_dirs = create_output_dirs(args.output_dir)
 
     random.Random(args.seed)
@@ -355,10 +409,12 @@ def main() -> None:
 
     if not args.skip_ba:
         for idx, n in enumerate(ba_sizes):
+            m = ba_edges[idx]
+            cg_n = ba_cgs[idx]
             name = f"ba_{n}"
             seed = args.seed + 10_000 + idx
             print(f"[BA] Generating {name} ...")
-            graph = generate_ba_graph(n=n, m=args.ba_m, seed=seed)
+            graph = generate_ba_graph(n=n, m=m, cg_n=cg_n, seed=seed)
 
             adj_path = output_dirs["adjlists"] / f"{name}.adjlist"
             meta_path = output_dirs["metadata"] / f"{name}.meta.json"
@@ -394,6 +450,14 @@ def main() -> None:
     manifest_path = args.output_dir / "manifest.json"
     dump_json({"datasets": manifest}, manifest_path)
     print(f"Wrote dataset manifest to {manifest_path}")
+
+    G = nx.read_adjlist(f'{args.output_dir}/adjlists/lfr_{n}.adjlist')
+
+    # each node has a 'community' attribute
+    import pandas as pd
+    df = pd.read_csv(f"{args.output_dir}/labels/lfr_{n}.labels.tsv", sep="\t")
+    num_communities = df["label"].nunique()
+    print(G.number_of_nodes(), G.number_of_edges(), num_communities)
 
 
 if __name__ == "__main__":
