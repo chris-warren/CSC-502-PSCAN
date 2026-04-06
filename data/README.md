@@ -70,20 +70,6 @@ For BA graphs, the main generation parameter is:
 - `m`: number of edges attached by each new node
 - random seed
 
-The default parameters used in our script are:
-
-#### LFR defaults
-- `tau1 = 3.0`
-- `tau2 = 1.5`
-- `mu = 0.1`
-- `average_degree = 15`
-- `max_degree = 75`
-- `min_community = 20`
-- `max_community = 100`
-
-#### BA defaults
-- `m = 7`
-
 ### 6. Reproducibility Notes
 
 The PSCAN paper clearly specifies the two synthetic dataset families and the graph sizes used in evaluation, but it does not fully specify every LFR generator parameter needed for exact regeneration of the benchmark instances. Therefore, in our implementation, we reproduce the experimental design of the paper and explicitly document the parameter values used in `datasets.py`.
