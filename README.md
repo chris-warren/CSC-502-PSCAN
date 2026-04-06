@@ -8,7 +8,7 @@ A MapReduce-based implementation of the PSCAN graph clustering algorithm, evalua
 ## Project Structure
 
 ```
-pscan/
+CSC-502-PSCAN/working/
 ├── data/
 │   └── datasets.py              # LFR and BA graph generation
 ├── similarity/
